@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>JanMetrix</title>
+		<%= stylesheet_link_tag "application" %>
+		<%= javascript_include_tag "application" %>
+	</head>
+	<body>
+		<%= render 'layouts/navbar' %>
+		<div class="container-fluid" id="main-container">
+			<a href="#" id="menu-toggler"><span></span></a>
+				<%= render "layouts/sidemenu" %>
+			<div class="clearfix" id="main-content">
+				<%= render 'layouts/breadcrumbs' %>
+				<div id="page-content" class="clearfix span10">
+				<%= yield %>
+			</div>
+		</div>
+	</body>
+</html>
