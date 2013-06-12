@@ -1,7 +1,4 @@
-JanMetrix::Application.routes.draw do
-  resources :sic_codes
-
-  resources :leads
+JanMetrix::Application.routes.draw do  resources :leads
 
 
   get "leads/index"

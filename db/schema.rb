@@ -11,13 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130530235547) do
+ActiveRecord::Schema.define(:version => 20130611002638) do
+
+  create_table "addresses", :force => true do |t|
+    t.string   "line1"
+    t.string   "line2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.integer  "lead_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "leads", :force => true do |t|
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.string   "name"
     t.datetime "last_updated"
+  end
+
+  create_table "phones", :force => true do |t|
+    t.string   "ph_num"
+    t.string   "type"
+    t.integer  "lead_id"
+    t.integer  "ext"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "sic_codes", :force => true do |t|

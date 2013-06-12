@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ph_num: MyString
+  type: 
+  lead_id: 1
+  ext: 1
+
+two:
+  ph_num: MyString
+  type: 
+  lead_id: 1
+  ext: 1

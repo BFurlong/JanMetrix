@@ -13,6 +13,7 @@ class LeadsController < ApplicationController
 
   def new
   	@lead = Lead.new
+    @lead.build_address
   end
 
   def create
