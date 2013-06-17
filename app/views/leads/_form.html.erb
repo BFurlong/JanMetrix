@@ -1,5 +1,13 @@
 <%= simple_nested_form_for(@lead) do |f| %>
 	<%= f.input :name %>
+	<div class="row-fluid">
+		<div class="span4">
 	<%= render 'shared/gui_comp/generic_window', :f => f, :locals => {:title => "Address", :dsData => 'entities/addressable/form'}  %>
+</div>
+<div class="span4">
+	<%= render 'shared/gui_comp/generic_window', :f => f, :locals => { :title => "Phone", :dsData => 'entities/callable/callableForm'} %>
+</div>
 	<%= f.submit %>
+	
 	<% end %>
+</div>

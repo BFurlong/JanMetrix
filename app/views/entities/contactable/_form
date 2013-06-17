@@ -1,0 +1,4 @@
+<%= f.fields_for(@contact) %>
+	<%= f.input :fName %>
+	<%= f.input :lName %>
+<% end %>

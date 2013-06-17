@@ -1,6 +1,6 @@
 <h1>Leads</h1>
 <% @leads.each do |lead| %>
-	<%= lead.street_address.try(:line1) %>
+	<%= lead.address.try(:line1) %>
 	<%= link_to lead.name, lead_path(lead.id) %>
 	<br />
 <% end %>

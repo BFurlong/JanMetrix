@@ -1,5 +1,5 @@
 class Phone < ActiveRecord::Base
-  attr_accessible :ext, :lead_id, :ph_num, :type
+  attr_accessible :ext, :ph_num
 
   belongs_to: :callable, :polymorphic => true
 end

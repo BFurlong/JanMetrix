@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130611002638) do
+ActiveRecord::Schema.define(:version => 20130615170514) do
 
   create_table "addresses", :force => true do |t|
     t.string   "line1"
@@ -19,9 +19,30 @@ ActiveRecord::Schema.define(:version => 20130611002638) do
     t.string   "city"
     t.string   "state"
     t.string   "zipcode"
-    t.integer  "lead_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "addressable_id"
+    t.string   "addressable_type"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.string   "f_name"
+    t.string   "l_name"
+    t.integer  "contactable_id"
+    t.string   "contactable_type"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "emails", :force => true do |t|
+    t.string   "email_address"
+    t.string   "domain"
+    t.string   "full_email"
+    t.string   "type"
+    t.integer  "emailable_id"
+    t.string   "emailable_type"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "leads", :force => true do |t|
@@ -31,13 +52,24 @@ ActiveRecord::Schema.define(:version => 20130611002638) do
     t.datetime "last_updated"
   end
 
+  create_table "people", :force => true do |t|
+    t.string   "fName"
+    t.string   "lName"
+    t.string   "salutation"
+    t.string   "sex"
+    t.integer  "personable_id"
+    t.string   "personable_type"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
   create_table "phones", :force => true do |t|
     t.string   "ph_num"
-    t.string   "type"
-    t.integer  "lead_id"
     t.integer  "ext"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "callable_id"
+    t.string   "callable_type"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "sic_codes", :force => true do |t|
