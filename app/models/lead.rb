@@ -7,6 +7,6 @@ class Lead < ActiveRecord::Base
   has_many :contacts, as: :contactable
 
 
-  accepts_nested_attributes_for :address, :phone, :allow_destroy => true
+  accepts_nested_attributes_for :address, :phone, :emails, :allow_destroy => true
 
 end

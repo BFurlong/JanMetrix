@@ -1,2 +1,0 @@
-module SicCodesHelper
-end
